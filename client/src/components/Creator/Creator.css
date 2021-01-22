@@ -17,14 +17,17 @@
 }
 input{
     background: #6f6f72;
+    color: white;
 }
 textarea{
-    width: 800px;
-    height: 200px;
-    min-width: 400px;
-    min-height: 100px;
+    width: 50vw;
+    height: 20vh;
+    max-width: 80vw;
+    max-height: 40vh;
+    min-width: 30vw;
+    min-height: 5vh;
     background: #6f6f72;
-    color: red;
+    color: white;
     border: solid 2px black;
 }
 ::-webkit-input-placeholder { /* Chrome */

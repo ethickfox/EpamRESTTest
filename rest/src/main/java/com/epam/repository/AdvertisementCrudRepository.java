@@ -8,12 +8,11 @@ import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
-public interface AdvertismentCrudRepository extends CrudRepository<Advertisement, Long> {
-    List<Advertisement> findByAuthor(@Param("author") String name);
+public interface AdvertisementCrudRepository extends CrudRepository<Advertisement, Long> {
 
-    List<Advertisement> findByAuthorOrderByEmail(@Param("value") String name);
+    List<Advertisement> findAllByOrderByIdDesc();
+
 }
-
-//Collections resources support both GET and POST. All other HTTP methods cause a 405 Method Not Allowed
