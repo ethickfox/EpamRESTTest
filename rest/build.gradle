@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'checkstyle'
+    id 'pmd'
+    id 'jacoco'
+    id 'org.springframework.boot' version '2.3.2.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+}
+group 'com.epam.epamRest'
+version '0.1'
+
+repositories {
+    mavenCentral()
+}
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.5'
+}
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.2.18'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+jar {
+    baseName = 'rest'
+    version = '0.1'
+
+    into('/static') {
+        from '../client/dist'
+    }
+}

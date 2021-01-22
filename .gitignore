@@ -1,0 +1,14 @@
+/.gradle/
+/.idea/
+/rest/src/main/resources/static/
+/client/gradlew
+/client/.eslintcache
+/client/gradlew.bat
+/client/package-lock.json
+/rest/gradlew
+/rest/gradlew.bat
+/gradlew
+/gradlew.bat
+/rest/gradle/
+/client/gradle/
+/gradle/

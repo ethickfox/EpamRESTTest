@@ -1,0 +1,43 @@
+.adv-card {
+    background-color: #57575a
+}
+
+.post {
+    padding: 1em 1em 1em 1em;
+    background: #525254;
+    border: solid 9px rgba(160, 160, 160, 0.3);
+    margin: 0 0 2em 0;
+}
+.post > header {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    border-top: solid 3px rgba(160, 160, 160, 0.3);
+}
+input{
+    background: #6f6f72;
+}
+textarea{
+    width: 800px;
+    height: 200px;
+    min-width: 400px;
+    min-height: 100px;
+    background: #6f6f72;
+    color: red;
+    border: solid 2px black;
+}
+::-webkit-input-placeholder { /* Chrome */
+    color: white;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: white;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: white;
+    opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+    color: white;
+    opacity: 1;
+}

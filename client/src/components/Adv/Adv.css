@@ -1,0 +1,17 @@
+.adv-card {
+    background-color: #57575a
+}
+
+.post {
+    padding: 1em 1em 1em 1em;
+    background: #525254;
+    border: solid 9px rgba(160, 160, 160, 0.3);
+    margin: 0 0 2em 0;
+}
+.post > header {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    border-top: solid 3px rgba(160, 160, 160, 0.3);
+}

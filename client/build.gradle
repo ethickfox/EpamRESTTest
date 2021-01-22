@@ -1,0 +1,13 @@
+group 'com.epam.epamRest'
+version '0.1'
+
+task testAll {
+    dependsOn ':rest:check'
+    dependsOn ':history-service:check'
+    dependsOn ':client:check'
+    dependsOn ':rest:jacocoTestCoverageVerification'
+    dependsOn ':rest:jacocoTestReport'
+}
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.5'
+}

@@ -1,0 +1,3 @@
+rootProject.name = 'EpamRESTTest'
+include 'rest'
+include 'client'
