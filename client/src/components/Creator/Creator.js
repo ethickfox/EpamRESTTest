@@ -3,7 +3,7 @@ import "./Creator.css"
 
 class Creator extends React.Component {
     state = {
-        create:this.props.create,
+        create: this.props.create,
         name: "",
         email: "",
         text: "",
@@ -14,9 +14,9 @@ class Creator extends React.Component {
             <div className="post">
                 <p>Добавить объявление</p>
                 <form onSubmit={this.state.create}>
-                    <input type="text" placeholder={"Имя"} name={"name"} />
+                    <input type="text" placeholder={"Имя"} name={"name"}/>
                     <br/>
-                    <input type="text" placeholder={"Email"} name={"email"} />
+                    <input type="text" placeholder={"Email"} name={"email"}/>
                     <br/>
                     <br/>
                     <textarea placeholder={"Объявление"} name={"text"}/>
@@ -26,9 +26,6 @@ class Creator extends React.Component {
             </div>
         );
     };
-
-    sendData() {
-    }
 }
 
 export default Creator;

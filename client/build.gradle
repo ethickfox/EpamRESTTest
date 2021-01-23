@@ -7,33 +7,28 @@ buildscript {
             url "https://plugins.gradle.org/m2/"
         }
     }
-
     dependencies {
-        classpath "com.moowork.gradle:gradle-node-plugin:0.13"
+        classpath "com.moowork.gradle:gradle-node-plugin:1.2.0"
     }
 }
+
 apply plugin: 'com.moowork.node'
+
 node {
-    // Version of node to use.
-    version = '14.15.4'
-    // If true, it will download node using above parameters.
-    // If false, it will try to use globally installed node.
-    download = true
+    version = '10.14.1'
+    npmVersion = '6.4.1'
+    download = false
 }
-task bundle(type: NpmTask) {
-    dependsOn 'npmInstall'
-    print "Bundling\n"
-    args = ['run', 'build']
-}
-//task npmInstall(type: Exec) {
-////    workingDir 'src/main/webapp'
-//    commandLine 'npm', 'install'
-//}
-//task npmBuild(type: Exec) {
-////    workingDir 'src/main/webapp'
-//    commandLine 'npm', 'build'
-//}
 
 task wrapper(type: Wrapper) {
     gradleVersion = '3.5'
+}
+
+task npmStartDev(type: NpmTask) {
+    dependsOn(npmInstall)
+    args = ['run', 'start']
+}
+task npmBuild(type: NpmTask) {
+    dependsOn(npmInstall)
+    args = ['run', 'build']
 }

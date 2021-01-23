@@ -1,2 +1,15 @@
 group 'com.epam.epamRest'
 version '0.1'
+
+task copyClientBuild(type: Copy){
+    from "/client/build"
+    into "/rest/src/main/resources/static"
+    dependsOn ':client:npmBuild'
+}
+
+task makeJar(type: Copy){
+    from "/rest/build/libs"
+    into "/jar"
+    dependsOn 'copyClientBuild'
+    dependsOn ':rest:bootJar'
+}

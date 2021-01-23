@@ -28,7 +28,7 @@ class App extends React.Component {
         const email = event.target.email.value;
         const text = event.target.text.value;
 
-        axios.put(`/api/adv/save?`
+        axios.post(`/api/adv/save?`
             +`name=`+ name
             +`&email=`+ email
             +`&text=` + text)
